@@ -604,8 +604,6 @@ fn discover_rpc_agents_in_path(path_var: impl AsRef<std::ffi::OsStr>) -> Vec<Rpc
 
 #[cfg(test)]
 mod tests {
-    use serial_test::serial;
-
     use super::*;
 
     #[test]

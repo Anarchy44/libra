@@ -5,7 +5,6 @@ use std::os::unix::ffi::OsStringExt;
 use std::{
     borrow::Cow,
     collections::{HashMap, HashSet, VecDeque},
-    ffi::OsString,
     fs,
     path::{Path, PathBuf},
     str::FromStr,

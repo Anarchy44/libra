@@ -1911,7 +1911,7 @@ mod tests {
     use super::{
         RebaseError, RebaseTreeEntry, ReplayErrorKind, classify_relative_to_base,
         collect_tree_items_and_paths, create_tree_from_items_map, index_mode_to_tree_item_mode,
-        resolve_three_way, tree_item_mode_to_index_mode, tree_item_name, write_workdir_blob,
+        resolve_three_way, tree_item_mode_to_index_mode, tree_item_name,
     };
     use crate::{
         command::load_object,

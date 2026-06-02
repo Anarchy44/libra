@@ -122,10 +122,7 @@ fn rebased_branch_shows_changed() {
     fs::write(repo_path.join("file_1.txt"), "main version\n").unwrap();
     let output = run_libra_command(&["add", "file_1.txt"], &repo_path);
     assert_cli_success(&output, "add on main");
-    let output = run_libra_command(
-        &["commit", "-m", "main modify", "--no-verify"],
-        &repo_path,
-    );
+    let output = run_libra_command(&["commit", "-m", "main modify", "--no-verify"], &repo_path);
     assert_cli_success(&output, "commit on main");
 
     // Switch back to feature and rebase onto main

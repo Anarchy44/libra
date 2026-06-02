@@ -248,8 +248,9 @@ async fn resolve_diff_text(commit: &Commit) -> Result<String, CliError> {
 async fn get_commit_blobs(
     commit_hash: &ObjectHash,
 ) -> Result<Vec<(PathBuf, ObjectHash)>, CliError> {
-    use crate::utils::object_ext::TreeExt;
     use git_internal::internal::object::tree::Tree;
+
+    use crate::utils::object_ext::TreeExt;
 
     let commit: Commit = command::load_object(commit_hash)
         .map_err(|e| CliError::fatal(format!("failed to load commit '{}': {}", commit_hash, e)))?;

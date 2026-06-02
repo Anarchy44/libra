@@ -11,7 +11,7 @@
 //! the bottom run the binary outside or inside an empty repo to confirm
 //! the user-visible failure behaviour.
 
-use std::{fs, process::Command};
+use std::process::Command;
 
 use libra::{
     cli::Bisect,
@@ -711,7 +711,7 @@ async fn test_bisect_run_without_bounds_does_not_spawn_command() {
     let err = result.unwrap_err();
     assert_eq!(err.stable_code().as_str(), "LBR-REPO-003");
     assert!(
-        fs::metadata(&marker).is_err(),
+        std::fs::metadata(&marker).is_err(),
         "bisect run spawned the command before validating bounds"
     );
 }
